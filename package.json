@@ -1,6 +1,6 @@
 {
   "name": "i3s-awesome",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "i3s-awesome creator",
   "main": "index.js",
   "scripts": {
@@ -15,5 +15,14 @@
     "extend": "^3.0.0",
     "pg": "^4.4.3",
     "unzip": "^0.1.11"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LinZap/i3s-awesome.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LinZap/i3s-awesome/issues"
+  },
+  "homepage": "https://github.com/LinZap/i3s-awesome#readme"
 }
