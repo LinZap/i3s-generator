@@ -1,0 +1,7 @@
+[
+	{"q" : "host","ans":"localhost"},
+	{"q" : "port","ans":"5432"},
+	{"q" : "dbname","ans":"i3s-awesome"},
+	{"q" : "user","ans":"postgres"},
+	{"q" : "password"}
+]
