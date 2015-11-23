@@ -21,11 +21,20 @@ module.exports = function(dirname){
 	console.log("fetch: "+sourceURL);
 
 	var request = http.get(sourceURL, function(response) {
+		
 		response.pipe(zip);
-		uz();
+		response.on('end', function() {
+		  	uz();
+		});
+	
 	}).on('error', function(e) {
 		console.error("Can not fetch I3S-Awesome");
 		console.error(e.message);
+	});
+
+	zip.on('end', function() {
+		zip.close();
+	  	uz();
 	});
 
 	function uz(){
@@ -41,15 +50,17 @@ module.exports = function(dirname){
 
 		console.log("unzip: "+tmpzipPath);
 
-		var rs = fs.createReadStream(tmpzipPath)
-		.pipe(unzip.Extract({ path: dirpath}));
+		var rz = fs.createReadStream(tmpzipPath);
 
-		fs.unlinkSync(tmpzipPath);
+		var ext = unzip.Extract({ path: dirpath});
+		rz.pipe(ext);
 
-		console.log("Created I3S-Awesome: "+dirname);
-		console.log("done");
-		process.exit(0);
-		
+		ext.on('close', function() {
+		  	console.log("Created I3S-Awesome: "+dirname);
+		  	fs.unlinkSync(tmpzipPath);
+		  	process.exit(0);
+		});
+
 	}
 
 
