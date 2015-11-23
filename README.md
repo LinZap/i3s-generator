@@ -1,4 +1,4 @@
-# I3S-Awesome Creator 
+# I3S-Awesome Generator
 
 i3s-awesome 是一個 [NodeJS](https://nodejs.org) 的 Package  
 用來快速產生 Web Framework 與 資料庫
