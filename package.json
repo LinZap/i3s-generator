@@ -1,6 +1,6 @@
 {
   "name": "i3s-generator",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "i3s-generator",
   "main": "index.js",
   "scripts": {
@@ -10,9 +10,10 @@
     "i3s": "bin/i3s.js"
   },
   "author": "Zap",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "extend": "^3.0.0",
+    "nodegit": "^0.11.2",
     "pg": "^4.4.3",
     "rimraf": "^2.5.2",
     "unzip": "^0.1.11"
@@ -25,5 +26,11 @@
   "bugs": {
     "url": "https://github.com/LinZap/i3s-generator/issues"
   },
-  "homepage": "https://github.com/LinZap/i3s-generator#readme"
+  "homepage": "https://github.com/LinZap/i3s-generator#readme",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "i3s"
+  ]
 }
