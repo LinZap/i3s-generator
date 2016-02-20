@@ -1,7 +1,7 @@
 # I3S-Awesome Generator
 
-i3s-awesome 是一個 [NodeJS](https://nodejs.org) 的 Package  
-他能用來快速產生：
+I3S-Generator 是一個 [NodeJS](https://nodejs.org) 的 Package  
+它能用來快速產生：
  * I3S-Database
  * I3S-Awesome
  * I3S-Framework
@@ -11,7 +11,7 @@ i3s-awesome 是一個 [NodeJS](https://nodejs.org) 的 Package
 
 在全域安裝工具
 
-    npm install -g i3s-awesome
+    npm install -g i3s-generator
 
 開啟 `gitlab.json` 設定您在 [GitLab](https://gitlab.com) 上的帳號密碼
 
