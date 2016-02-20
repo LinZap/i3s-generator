@@ -1,0 +1,5 @@
+{	
+	"schema" : "gitlab.com/wkelab/i3s-schema.git",
+	"awesome" : "gitlab.com/wkelab/i3s-awesome.git",
+	"framework" : "gitlab.com/wkelab/i3s-framework.git"
+}
