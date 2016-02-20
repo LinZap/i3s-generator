@@ -9,19 +9,14 @@ I3S-Generator 是一個 [NodeJS](https://nodejs.org) 的 Package
 
 ## Installation
 
-在全域安裝工具
+### 在全域安裝工具
 
     npm install -g i3s-generator
 
-開啟 `gitlab.json` 設定您在 [GitLab](https://gitlab.com) 上的帳號密碼
+### 設定您在 [GitLab](https://gitlab.com) 上的帳號密碼
 
-````js
-	
-{
-	"username": "",
-	"password": ""
-}
-````
+    i3s init
+
 
 
 ## Usage

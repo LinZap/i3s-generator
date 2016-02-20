@@ -4,18 +4,15 @@
 	@ By Zap
 */
 
-var i3s_db = require('./i3s-db'),
-	//i3s_awesome = require('./i3s-awesome'),
-	git = require('./../lib/git.js'),
+var git = require('./../lib/git'),
 	field = process.argv[2];
-
-
 
 switch(field) {
 
 	case 'db': 
 		git.clone('schema',function(prjpath){
 			// D:\Node\i3s-generator\lib/schema
+			var i3s_db = require('./i3s-db');
 			i3s_db(prjpath);
 		});
 	break;
@@ -36,7 +33,15 @@ switch(field) {
 			process.exit();
 		});
 	break;
-		
+	
+	case 'init':
+		var set_gitlab = require('./set-gitlab');
+		set_gitlab(function(){
+			console.log("done!");
+			process.exit();
+		});
+	break;
+
 	case '--help':
 		help();
 	break;
@@ -54,6 +59,7 @@ function help(){
 console.log("\
 \n usage: i3s [commands]\n\
 \n These are common i3s commands: \n\
+\n  init\t\t\treset GitLab configuration \
 \n  db\t\t\tcreate a empty i3s-database\
 \n  framework [prjname]\tcarete a back-end i3s-framework\
 \n  awesome [prjname]\tcarete a front-end i3s-awesome");

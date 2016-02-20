@@ -1,6 +1,6 @@
 {
   "name": "i3s-generator",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "i3s-generator",
   "main": "index.js",
   "scripts": {
