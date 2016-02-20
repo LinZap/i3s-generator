@@ -24,7 +24,7 @@ switch(field) {
 			console.error(`command not found!\nplease type like this:\n\n\ti3s ${field} [prjname]\n`);
 			process.exit();
 		}
-		var prjdist = __dirname+ "/" + process.argv[3];
+		var prjdist =  "./" + process.argv[3];
 
 		git.setPrjPath(prjdist);
 		console.log(`i3s-${field} fetching...`);
